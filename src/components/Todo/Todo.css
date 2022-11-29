@@ -1,0 +1,151 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--color-bg-varient);
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: 2rem auto;
+}
+
+.todo-message{
+    display: flex;
+    width: 90%;
+    gap: 5%;
+    justify-content: space-between;
+    margin: 1rem 0;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.todo-message > input{
+    width: 80%;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: .5rem;
+    border: 2px solid var(--color-accent2);
+}
+
+.todo-message > button{
+    width: 15%;
+    border-radius: 8px;
+    padding: 5px;
+    overflow: hidden;
+    background: var(--color-txt);
+    color: var(--color-white);
+    border: 1px solid var(--color-text);
+}
+
+.todo-message > button:hover{
+    background: var(--color-accent1);
+    color: var(--color-bg-varient);
+}
+
+.todo-display{
+    display: flex;
+    width: 43vw;
+    align-items: center;
+    justify-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+    border: 2px solid var(--color-txt);
+    border-radius: 5px;
+    padding: .3rem;
+}
+
+.check-box{
+    height: 1.5rem;
+    width: 1.5rem;
+    width: 5%;
+}
+
+.output{
+    border-left: 1px solid var(--color-light);
+    border-right: 1px solid var(--color-light);
+    padding: 5px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    width: 12.5%;
+    color: var(--color-white);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.delete{
+    background: rgb(185, 7, 7);
+}
+.delete:hover{
+    background: rgb(228, 6, 6);
+}
+
+.save{
+    background: #023624;
+}
+.save:hover{
+    background: #056d49;
+}
+
+.edit{
+    background: #d85504;
+}
+.edit:hover{
+    background: #fa8339;
+}
+
+@media screen and (max-width: 64rem){
+    .App{
+        width: 70%;
+    }
+
+    .todo-message{
+        width: 95%;
+        gap: 5%;
+    }
+
+    .todo-message > input{
+        width: 75%;
+    }
+
+    .todo-message > button{
+        width: 20%
+    }
+
+    .todo-display{
+        width: 63vw;
+    }
+}
+
+@media screen and (max-width: 37.5rem){
+    .App{
+        width: 90%;
+    }
+
+    .todo-message{
+        width: 95%;
+        gap: 2%;
+    }
+
+    .todo-message > input{
+        width: 83%;
+    }
+
+    .todo-message > button{
+        width: 20%
+    }
+
+    .todo-display{
+        width: 80vw;
+    }
+}

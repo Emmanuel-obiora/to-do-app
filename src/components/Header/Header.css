@@ -1,0 +1,11 @@
+.container{
+    margin-top: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    color: var(--color-accent1);
+   
+}
