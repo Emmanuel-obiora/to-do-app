@@ -90,7 +90,7 @@ function Todo(){
                         (<div className="output"> {todo.text} </div>)
                     }
 
-                    <button onClick = {() => deleteTodo (todo.id)} className="button delete"> Delete </button>
+                    <button onClick = {() => deleteTodo (todo.id)} className="button delete"> Del </button>
 
                     {todoEditing === todo.id ? (<button className="button save" onClick={() => editTodo (todo.id)} >Save</button>) :
                     (<button className="button edit" onClick = {() => setTodoEditing (todo.id)}> Edit</button>)}
