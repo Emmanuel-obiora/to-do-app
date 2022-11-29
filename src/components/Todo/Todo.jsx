@@ -30,9 +30,12 @@ function Todo(){
             text: todo,
             completed: false,
         }
-
+        if (todo === ""){
+            alert("Please enter a Todo to continue.")
+        } else {
         setTodos([...todos].concat(newTodo))
         setTodo("")
+        }
     }
 
     function deleteTodo(id){
@@ -66,9 +69,10 @@ function Todo(){
     return (
         <div className='App'>
             <form onSubmit = {handleSubmit} className="todo-message">
-                <input type="text" onChange={(e) => setTodo(e.target.value)} value={todo}/>
+                <input id="new" type="text" onChange={(e) => setTodo(e.target.value)} value={todo}/>
                 <button type="submit">Add Todo</button>
             </form>
+
             {todos.map((todo) => <div key= {todo.id}>
                 <div className='todo-display'>
                     <input

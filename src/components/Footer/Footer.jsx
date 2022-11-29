@@ -11,7 +11,7 @@ const Footer = () => {
 
       <div className="footer_socials">
         <a rel="noreferrer" href="https://m.facebook.com/emmanuel-obiora" target="_blank" ><FaFacebookF /></a>
-        <a rel="noreferrer" href="https://instagram.com" target="_blank"><RiInstagramFill /></a>
+        <a rel="noreferrer" href="https://instagram.com/geniusobi" target="_blank"><RiInstagramFill /></a>
         <a rel="noreferrer" href="https://twitter.com/Miroclesdgenius" target="_blank"><BsTwitter /></a>
       </div>
 
