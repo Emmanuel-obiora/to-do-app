@@ -67,41 +67,41 @@
     border-left: 1px solid var(--color-light);
     border-right: 1px solid var(--color-light);
     padding: 5px;
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     align-items: center;
 }
 
 .button{
-    width: 12.5%;
-    color: var(--color-white);
+    width: 7.5%;
+    background: transparent;
+    font-size: 25px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
 }
 
 .delete{
-    background: rgb(185, 7, 7);
+    color: rgb(185, 7, 7);
 }
 .delete:hover{
-    background: rgb(228, 6, 6);
+    color: rgb(228, 6, 6);
 }
 
 .save{
-    background: #023624;
+    color: #023624;
 }
 .save:hover{
-    background: #056d49;
+    color: #056d49;
 }
 
 .edit{
-    background: #d85504;
+    color: #d85504;
 }
 .edit:hover{
-    background: #fa8339;
+    color: #fa8339;
 }
 
 @media screen and (max-width: 64rem){

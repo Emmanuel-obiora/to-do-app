@@ -1,5 +1,9 @@
 import React from 'react'
 import './Todo.css'
+import {AiFillDelete} from 'react-icons/ai'
+import {BsSaveFill} from 'react-icons/bs'
+import {AiFillEdit} from 'react-icons/ai'
+// import { confirm } from "react-confirm-box";
 
 function Todo(){
     const [todos, setTodos] = React.useState([])
@@ -37,9 +41,9 @@ function Todo(){
         setTodo("")
         }
     }
-
-    function deleteTodo(id){
-        const updatedTodos = [...todos].filter((todo) => todo.id !==id)
+    
+    function deleteTodo(id){ 
+        let updatedTodos = [...todos].filter((todo) => todo.id !==id)
         setTodos(updatedTodos)
     }
 
@@ -70,7 +74,7 @@ function Todo(){
         <div className='App'>
             <form onSubmit = {handleSubmit} className="todo-message">
                 <input id="new" type="text" onChange={(e) => setTodo(e.target.value)} value={todo}/>
-                <button type="submit">Add Todo</button>
+                <button type="submit" title="Add Todo"> Add Todo</button>
             </form>
 
             {todos.map((todo) => <div key= {todo.id}>
@@ -94,10 +98,10 @@ function Todo(){
                         (<div className="output"> {todo.text} </div>)
                     }
 
-                    <button onClick = {() => deleteTodo (todo.id)} className="button delete"> Del </button>
+                    <button onClick = {() => deleteTodo (todo.id)} className="button delete" title="Delete Todo"> <AiFillDelete /> </button>
 
-                    {todoEditing === todo.id ? (<button className="button save" onClick={() => editTodo (todo.id)} >Save</button>) :
-                    (<button className="button edit" onClick = {() => setTodoEditing (todo.id)}> Edit</button>)}
+                    {todoEditing === todo.id ? (<button className="button save" onClick={() => editTodo (todo.id)} title="Save edited Todo">< BsSaveFill /></button>) :
+                    (<button className="button edit" onClick = {() => setTodoEditing (todo.id)} title="Edit Todo">< AiFillEdit /> </button>)}
                 </div>
             </div>)}
         </div>

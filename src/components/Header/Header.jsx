@@ -6,7 +6,7 @@ function Header() {
     <header id="header">
       <div className="container header_container">
 
-        <h1 className='brand-logo'>MIROCLES</h1>
+        <h1 className='brand-logo'>Miro</h1>
 
       </div>
     </header>
