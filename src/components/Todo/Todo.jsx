@@ -1,5 +1,7 @@
 import React from 'react'
+import { useState } from "react"
 import './Todo.css'
+import './Modal.css'
 import {AiFillDelete} from 'react-icons/ai'
 import {BsSaveFill} from 'react-icons/bs'
 import {AiFillEdit} from 'react-icons/ai'
@@ -10,6 +12,7 @@ function Todo(){
     const [todo, setTodo] = React.useState("")
     const [todoEditing, setTodoEditing] = React.useState(null)
     const [editingText, setEditingText] = React.useState("")
+    const [modal, setModal] = useState(false);
 
     React.useEffect(() => {
         const temp = localStorage.getItem("todos")
@@ -43,7 +46,7 @@ function Todo(){
     }
     
     function deleteTodo(id){ 
-        let updatedTodos = [...todos].filter((todo) => todo.id !==id)
+        const updatedTodos = [...todos].filter((todo) => todo.id !==id)
         setTodos(updatedTodos)
     }
 
@@ -67,6 +70,16 @@ function Todo(){
         setTodos(updatedTodos)
         setTodoEditing(null)
         setEditingText("")
+    }
+
+    const toggleModal = () => {
+        setModal(!modal);
+    };
+
+    if(modal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
     }
 
 
@@ -97,12 +110,28 @@ function Todo(){
                         :
                         (<div className="output"> {todo.text} </div>)
                     }
-
-                    <button onClick = {() => deleteTodo (todo.id)} className="button delete" title="Delete Todo"> <AiFillDelete /> </button>
+                        
+                    <button className="button delete" title="Delete Todo" onClick = {() => deleteTodo (todo.id)}> <AiFillDelete /> </button>
 
                     {todoEditing === todo.id ? (<button className="button save" onClick={() => editTodo (todo.id)} title="Save edited Todo">< BsSaveFill /></button>) :
                     (<button className="button edit" onClick = {() => setTodoEditing (todo.id)} title="Edit Todo">< AiFillEdit /> </button>)}
                 </div>
+
+                {modal && (
+                        <div className="modal">
+                            <div onClick={toggleModal} className="overlay">
+                                <div className="modal-content">
+                                    <p>Are you sure you want to delete this Todo?</p>
+                                    <div className="actions">
+                                        <button onClick={toggleModal} className="goOn">Yes</button>
+                                        <button onClick={toggleModal} className="neverMind">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    
+
             </div>)}
         </div>
     );

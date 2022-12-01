@@ -47,10 +47,10 @@
 
 .todo-display{
     display: flex;
-    width: 43vw;
+    width: 42.5vw;
     align-items: center;
     justify-items: center;
-    gap: .5rem;
+    gap: 2%;
     margin-bottom: .5rem;
     border: 2px solid var(--color-txt);
     border-radius: 5px;
@@ -60,21 +60,21 @@
 .check-box{
     height: 1.5rem;
     width: 1.5rem;
-    width: 5%;
+    width: 7%;
 }
 
 .output{
     border-left: 1px solid var(--color-light);
     border-right: 1px solid var(--color-light);
     padding: 5px;
-    width: 80%;
+    width: 68%;
     height: auto;
-    display: flex;
     align-items: center;
+    word-wrap: break-word;
 }
 
 .button{
-    width: 7.5%;
+    width: 9.5%;
     background: transparent;
     font-size: 25px;
     padding: 5px;
@@ -104,6 +104,7 @@
     color: #fa8339;
 }
 
+
 @media screen and (max-width: 64rem){
     .App{
         width: 70%;
@@ -123,7 +124,7 @@
     }
 
     .todo-display{
-        width: 63vw;
+        width: 62.5vw;
     }
 }
 
@@ -146,6 +147,6 @@
     }
 
     .todo-display{
-        width: 80vw;
+        width: 77.2vw;
     }
 }

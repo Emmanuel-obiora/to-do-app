@@ -1,0 +1,72 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.model, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay{
+    background: rgba(49,49,49,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    align-items: justify;
+}
+.modal-content {
+    position: absolute;
+    background: var(--color-white);
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 25%;
+    z-index: 9999px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    border-radius: 3px;
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions > button{
+    border: 2px solid var(--color-bg-varient);
+    background: var(--color-bg);
+    padding: .4rem;
+    border-radius: 8px;
+    color: var(--color-accent1);
+}
+
+.goOn:hover{
+    background: var(--color-accent2);
+    color: var(--color-white);
+}
+
+.neverMind:hover{
+    background: var(--color-txt);
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 64rem){
+    .modal-content{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 37.5rem){
+    .modal-content{
+        width: 60%;
+    }
+}
