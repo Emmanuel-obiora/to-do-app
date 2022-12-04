@@ -1,12 +1,14 @@
 footer{
-    position: absolute;
+    /* position: absolute; */
     padding: 1rem;
-    height: auto;
+    /* height: auto; */
     background: var(--color-bg-varient);
     text-align: center;
     right: 0;
-    left: 0;
-    bottom: 0;
+    /* left: 0; */
+    /* bottom: 0; */
+    grid-column: 1/-1;
+    margin-top: auto;
 }
 
 .footer_logo{
