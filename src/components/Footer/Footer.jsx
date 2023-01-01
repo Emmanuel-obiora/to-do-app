@@ -5,6 +5,14 @@ import {RiInstagramFill} from 'react-icons/ri'
 import {BsTwitter} from 'react-icons/bs' 
 
 const Footer = () => {
+
+  setInterval(() => {
+    var preDate = new Date();
+    var yearNow = preDate.getFullYear();
+
+    document.getElementById('year').innerHTML = yearNow;
+  },10);
+
   return (
     <footer>
       <a href="#header" className='footer_logo'>Miro</a>
@@ -16,7 +24,7 @@ const Footer = () => {
       </div>
 
       <div className="footer_copyright">
-        <small> &copy; Panther 2022. All rights reserved.</small>
+        <small> &copy; Panther <span id='year'>Current year</span> All rights reserved.</small>
       </div>
     </footer>
   )

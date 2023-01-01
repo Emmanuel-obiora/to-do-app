@@ -153,7 +153,7 @@ Or you can view the published work by clicking this link [todo-app](https://emma
 
 ## Other Information
 
-### Authors
+### Author
 
 👤 **Obiora Emmanuel**
 
